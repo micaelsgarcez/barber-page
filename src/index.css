@@ -2,6 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-a {
-  @apply text-blue-500 hover:text-blue-400 hover:underline transition-all;
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+
+h1,
+h2,
+button {
+  font-family: 'Bebas Neue', cursive;
+}
+
+.bebas {
+  font-family: 'Bebas Neue', cursive;
+}
+
+header {
+  @apply relative pb-[370px];
+}
+
+header:before {
+  content: '';
+  background-image: url(./assets/bg-hero.jpg);
+  @apply absolute left-0 right-0 top-0 bottom-0 z-0 opacity-[0.61];
+}
+
+header > * {
+  @apply relative z-10;
+}
+
+.social {
+  @apply flex w-40 items-center;
+}
+
+.social a {
+  @apply text-2xl;
+}
+
+.social a:not(:last-child) {
+  @apply mr-4;
+}
+
+.logo {
+  @apply w-[112px];
+}
+
+.container-menu {
+  @apply w-40;
+}
+
+.toggle-menu {
+  @apply ml-auto text-3xl;
+}
+
+h1 {
+  @apply mx-auto mt-[12.5vw] mb-[30px] max-w-[800px] text-[3.75rem] leading-[4.375rem] tracking-[1.2px];
+}
+
+.hero p {
+  @apply mx-auto mb-[50px] max-w-[900px] leading-[1.625rem] tracking-[0.32px] opacity-[0.85];
+}
+
+.hero a {
+  @apply mb-[6vw] inline-block rounded-[3px] bg-secondary py-6 px-12 text-lg uppercase tracking-[1.08px];
+}
+
+.container-play-video {
+  @apply container mx-auto flex max-w-[1350px] items-center px-4;
+}
+
+.container-play-video button {
+  @apply mr-5 flex h-[55px] w-[55px] items-center justify-center rounded-full border-2 border-white text-2xl text-secondary;
+}
+
+.container-play-video span {
+  @apply relative tracking-[1.6px];
+}
+
+.container-play-video span:after {
+  content: '';
+  @apply absolute left-[115%] top-1/2 block h-[1px] w-full translate-y-[-0.5px] bg-white;
 }
